@@ -1,25 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Grid } from "@mui/material";
+import { Box } from "@mui/system";
+import DeveloperDrillDown from "./Components/DeveloperDrilldown";
+import MissionsOverview from "./Components/MissionsOverview";
+import OverallDevelopmentHealth from "./Components/OverallDevelopmentHealth";
+import PageHeader from "./Components/PageHeader";
+import PageTitleWrapper from "./Components/PageTitleWrapper";
+import TopCollaborators from "./Components/TopCollaborators";
+import TopCommits from "./Components/TopCommits";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box sx={{backgroundColor:"#aaa",height:'100vh'}}>
+      <PageTitleWrapper>
+        <PageHeader />
+      </PageTitleWrapper>
+      <Grid
+        sx={{
+          px: 1,
+        }}
+        container
+        direction="row"
+        justifyContent="center"
+        spacing={4}
+      >
+        <DeveloperDrillDown />
+        <OverallDevelopmentHealth/>
+        <TopCommits/>
+        <MissionsOverview/>
+        <TopCollaborators/>
+      </Grid>
+    </Box>
   );
 }
 
