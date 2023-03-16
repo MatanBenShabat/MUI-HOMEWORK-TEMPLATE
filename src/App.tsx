@@ -10,7 +10,7 @@ import TopCommits from "./Components/TopCommits";
 
 function App() {
   return (
-    <Box sx={{backgroundColor:"#aaa",height:'100vh'}}>
+    <Box sx={{backgroundColor:"#aaa"}}>
       <PageTitleWrapper>
         <PageHeader />
       </PageTitleWrapper>

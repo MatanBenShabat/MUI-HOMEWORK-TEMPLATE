@@ -1,5 +1,10 @@
-import { Grid } from "@mui/material";
+import { Grid, } from "@mui/material";
 import React from "react";
+import Average from "./Average";
+import PendingStories from "./PendingStories";
+import SolvedStories from "./SolvedStories";
+
+
 
 const MissionsOverview = () => {
   return (
@@ -9,7 +14,10 @@ const MissionsOverview = () => {
       container
       spacing={4}
     >
-      <div>MissionsOverview</div>
+      <SolvedStories/>
+      <PendingStories/>
+      <Average/>
+
     </Grid>
   );
 };

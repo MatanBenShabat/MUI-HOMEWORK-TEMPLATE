@@ -1,8 +1,16 @@
+import { Grid } from '@mui/material'
 import React from 'react'
+import Graph from './Graph'
 
 const Graphs = () => {
   return (
-    <div>Graphs</div>
+    <Grid
+    item
+    xs={8}
+    container
+    spacing={4}
+  >
+  </Grid>
   )
 }
 
