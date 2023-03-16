@@ -7,11 +7,11 @@ import Graphs from "./Graphs";
 const DeveloperDrillDown = () => {
   return (
     <Grid item xs={12}>
-        <Paper >
+      <Paper>
         <Diagram data={DATA.developerDrilldown} />
         <Graphs />
-    </Paper>
-      </Grid>
+      </Paper>
+    </Grid>
   );
 };
 
