@@ -35,11 +35,7 @@ const chartOptions: ApexOptions = {
       bar: {
         horizontal: false,
         borderRadius: 8,
-        columnWidth:'25%'
-        
-        // startingShape: "rounded",
-        // endingShape: "rounded",
-        // borderRadiusApplication: 'around',
+        columnWidth:'25%',
       },
       
     },
