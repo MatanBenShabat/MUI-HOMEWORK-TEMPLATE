@@ -1,13 +1,17 @@
 import { Grid, Paper } from "@mui/material";
 import React from "react";
+import TitledComponent from "../TitledComponent";
 
 const OverallDevelopmentHealth = () => {
   return (
-    <Grid item xs={5} >
-      <Paper sx={{height:"60vh"}}>
-        <div>OverallDevelopmentHealth</div>
-      </Paper>
-    </Grid>
+    <TitledComponent
+      xs={5}
+      title={"Overall Development Health"}
+      height={"60vh"}
+    >
+      {/*delete the height prop*/}
+      <div>OverallDevelopmentHealth</div>
+    </TitledComponent>
   );
 };
 

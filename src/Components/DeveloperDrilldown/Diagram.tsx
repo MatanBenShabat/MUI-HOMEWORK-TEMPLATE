@@ -34,8 +34,8 @@ const chartOptions: ApexOptions = {
     plotOptions: {
       bar: {
         horizontal: false,
-        borderRadius: 8,
-        columnWidth:'25%',
+        borderRadius: 12,
+        columnWidth:'20%',
       },
       
     },
