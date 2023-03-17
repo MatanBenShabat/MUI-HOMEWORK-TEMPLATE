@@ -4,7 +4,7 @@ import CustomSelect from "../CustomSelect";
 import TitledComponent from "../TitledComponent";
 import Diagram from "./Diagram";
 import Graphs from "./Graphs";
-import { Box } from "@mui/material";
+import { Box, Divider } from "@mui/material";
 
 
 const DeveloperDrillDown = () => {
@@ -15,6 +15,7 @@ const DeveloperDrillDown = () => {
       <CustomSelect title={"Select Period"} />
       </Box>
       <Diagram data={DATA.developerDrilldown} />
+      <Divider />
       <Graphs />
     </TitledComponent>
   );

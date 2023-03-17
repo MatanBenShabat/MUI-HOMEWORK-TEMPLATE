@@ -1,17 +1,18 @@
-import { Grid } from '@mui/material'
-import React from 'react'
-import Graph from './Graph'
+import { Grid } from "@mui/material";
+import React from "react";
+import { DATA } from "../../mock/mock";
+import Graph from "./Graph";
 
 const Graphs = () => {
   return (
-    <Grid
-    item
-    xs={8}
-    container
-    spacing={4}
-  >
-  </Grid>
-  )
-}
+    <Grid item xs={12} container spacing={0}>
+      
 
-export default Graphs
+      {DATA.graphs.map((e, i) => {
+        return <Graph data={e.data} chartName={e.name} subtitle={e.subtitle} />;
+      })}
+    </Grid>
+  );
+};
+
+export default Graphs;

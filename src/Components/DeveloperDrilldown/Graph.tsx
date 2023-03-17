@@ -12,21 +12,22 @@ const ChartSparklineOptions: ApexOptions = {
     },
     sparkline: {
       enabled: true,
+
     },
     zoom: {
       enabled: false,
     },
   },
-  colors: ['red'],
+  colors: ["red"],
   dataLabels: {
     enabled: false,
   },
   theme: {
-    mode: 'light',
+    mode: "light",
   },
   fill: {
     opacity: 1,
-    colors: ['red'],
+    colors: ["#4cc9f0"],
     type: "solid",
   },
   grid: {
@@ -36,8 +37,8 @@ const ChartSparklineOptions: ApexOptions = {
   },
   stroke: {
     show: true,
-    colors: ['red'],
-    width: 2,
+    colors: ["#4cc9f0"],
+    width: 4,
   },
   legend: {
     show: false,
@@ -78,26 +79,26 @@ const ChartSparklineOptions: ApexOptions = {
 interface GraphProps {
   data: number[];
   chartName: string;
+  subtitle:string;
 }
 
-const Graph: React.FC<GraphProps> = ({ data, chartName }) => {
+const Graph: React.FC<GraphProps> = ({ data, chartName, subtitle }) => {
   return (
     <Grid
-      xs={12}
-      sm={6}
-      md={4}
+      xs={4}
       item
       sx={{
         position: "relative",
       }}
     >
+      <Divider orientation="vertical" absolute/>
+
       <Box
         component="span"
         sx={{
           display: { xs: "none", sm: "inline-block" },
         }}
       >
-        <Divider orientation="vertical" flexItem absolute />
       </Box>
       <Box
         sx={{
@@ -106,10 +107,10 @@ const Graph: React.FC<GraphProps> = ({ data, chartName }) => {
       >
         <Box>
           <Typography variant="subtitle2" gutterBottom>
-            Avg. Session Duration
+            {chartName}
           </Typography>
-          <Typography variant="h3">
-            {/* {data.avgSessionDuration} */}
+          <Typography variant="h5" sx={{fontWeight: "700"}}>
+            {subtitle}
           </Typography>
         </Box>
 

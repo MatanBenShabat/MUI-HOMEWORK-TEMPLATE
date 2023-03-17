@@ -1,15 +1,11 @@
 import React from "react";
-import { Typography } from "@mui/material";
-import { grey } from "@mui/material/colors";
-
-
+import { Typography, Divider } from "@mui/material";
 
 interface TitleProps {
-    title: string
+  title: string;
 }
 
-
-const Title: React.FC<TitleProps> = ({title}) => {
+const Title: React.FC<TitleProps> = ({ title }) => {
   return (
     <>
       <Typography
@@ -24,13 +20,7 @@ const Title: React.FC<TitleProps> = ({title}) => {
       >
         {title}
       </Typography>
-      <Typography
-        sx={{
-          borderColor: "black",
-          borderBottom: `1.5px solid ${grey[200]}`,
-          display: "block",
-        }}
-      />
+      <Divider />
     </>
   );
 };
