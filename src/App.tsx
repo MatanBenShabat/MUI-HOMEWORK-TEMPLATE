@@ -1,4 +1,4 @@
-import { createTheme, Grid } from "@mui/material";
+import { createTheme, Grid, ThemeProvider } from "@mui/material";
 import { Box } from "@mui/system";
 import DeveloperDrillDown from "./Components/DeveloperDrilldown";
 import MissionsOverview from "./Components/MissionsOverview";
@@ -10,6 +10,7 @@ import TopCommits from "./Components/TopCommits";
 import { grey } from "@mui/material/colors";
 
 
+
 function App() {
 
 
@@ -18,7 +19,7 @@ function App() {
       mode: "light",
       primary: {
         main: grey[200],
-        // header: "#1d3557",
+        
       },
     },
     typography: {
@@ -58,6 +59,8 @@ function App() {
 
 
   return (
+    <ThemeProvider theme={theme}>
+    
     <Box sx={{backgroundColor:"#aaa"}}>
       <PageTitleWrapper>
         <PageHeader />
@@ -78,6 +81,7 @@ function App() {
         <TopCollaborators/>
       </Grid>
     </Box>
+    </ThemeProvider>
   );
 }
 
