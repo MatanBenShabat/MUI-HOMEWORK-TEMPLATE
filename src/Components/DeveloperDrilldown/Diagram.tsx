@@ -64,14 +64,15 @@ const chartOptions: ApexOptions = {
     },
     xaxis: {
       axisBorder: {
-        show: false
+        show: false,
       },
       axisTicks: {
         show: false
       },
       labels: {
         style: {
-          colors: "#adb5bd"
+          colors: "#adb5bd",
+          fontSize:"1.3rem"
         }
       }
     },

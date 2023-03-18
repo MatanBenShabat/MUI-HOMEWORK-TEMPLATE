@@ -6,6 +6,7 @@ import { ApexOptions } from "apexcharts";
 
 const ChartSparklineOptions: ApexOptions = {
   chart: {
+    
     background: "transparent",
     toolbar: {
       show: false,

@@ -9,17 +9,12 @@ import TopCollaborators from "./Components/TopCollaborators";
 import TopCommits from "./Components/TopCommits";
 import { grey } from "@mui/material/colors";
 
-
-
 function App() {
-
-
   const theme = createTheme({
     palette: {
       mode: "light",
       primary: {
         main: grey[200],
-        
       },
     },
     typography: {
@@ -55,32 +50,28 @@ function App() {
     },
   });
 
-
-
-
   return (
     <ThemeProvider theme={theme}>
-    
-    <Box sx={{backgroundColor:"#aaa"}}>
-      <PageTitleWrapper>
-        <PageHeader />
-      </PageTitleWrapper>
-      <Grid
-        sx={{
-          px: 1,
-        }}
-        container
-        direction="row"
-        justifyContent="center"
-        spacing={4}
-      >
-        <DeveloperDrillDown />
-        <OverallDevelopmentHealth/>
-        <TopCommits/>
-        <MissionsOverview/>
-        <TopCollaborators/>
-      </Grid>
-    </Box>
+      <Box sx={{ backgroundColor: "#aaa" }}>
+        <PageTitleWrapper>
+          <PageHeader />
+        </PageTitleWrapper>
+        <Grid
+          sx={{
+            px: 1,
+          }}
+          container
+          direction="row"
+          justifyContent="center"
+          spacing={3}
+        >
+          <DeveloperDrillDown />
+          <OverallDevelopmentHealth />
+          <TopCommits />
+          <MissionsOverview />
+          <TopCollaborators />
+        </Grid>
+      </Box>
     </ThemeProvider>
   );
 }

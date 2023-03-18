@@ -10,7 +10,7 @@ const AvatarError = styled(Avatar)(
         color: white;
         width: 11vh;
         height: 11vh;
-        box-shadow: 0px 0px 8px #ff0a54;
+        box-shadow: 0px 0px 8px #ffccd5;
         border-radius: 12px;
   `
 );
