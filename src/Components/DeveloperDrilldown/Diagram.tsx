@@ -15,17 +15,6 @@ const chartOptions: ApexOptions = {
         show: false
       },
     },
-    // markers: {
-    //   hover: {
-    //     sizeOffset: 2
-    //   },
-    //   shape: 'circle',
-    //   size: 6,
-    //   strokeWidth: 3,
-    //   strokeOpacity: 1,
-    //   strokeColors: theme.colors.alpha.white[100],
-    //   colors: [theme.colors.error.main]
-    // },
     colors: ["#ffb703"],
     fill: {
       opacity: 1

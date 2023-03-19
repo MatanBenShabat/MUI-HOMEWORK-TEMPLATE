@@ -1,16 +1,17 @@
 import React from "react";
-import { Typography, Divider } from "@mui/material";
+import { Typography, Divider,useTheme} from "@mui/material";
 
 interface TitleProps {
   title: string;
 }
 
 const Title: React.FC<TitleProps> = ({ title }) => {
+  const theme = useTheme()
   return (
     <>
       <Typography
         sx={{
-          color: "#1d3557",
+          color: theme.palette.primary.main,
           fontSize: "1.5rem",
           fontWeight: 700,
           letterSpacing: -0.5,

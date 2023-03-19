@@ -11,8 +11,8 @@ export function PageHeader() {
         <Avatar
           sx={{
             mr: 2,
-            width: theme.spacing(8),
-            height: theme.spacing(8),
+            width: theme.spacing(15),
+            height: theme.spacing(15),
           }}
           variant="rounded"
           alt={user.name}
@@ -20,8 +20,8 @@ export function PageHeader() {
         />
       </Grid>
       <Grid item>
-        <Typography variant="h3" component="h3" gutterBottom>
-          Welcome {user.name}!
+        <Typography variant="h4" fontWeight={600} color={theme.palette.primary.main} component="h3" gutterBottom>
+          Welcome, {user.name}!
         </Typography>
         <Typography variant="subtitle2">
           These are your analytics stats for today,{" "}

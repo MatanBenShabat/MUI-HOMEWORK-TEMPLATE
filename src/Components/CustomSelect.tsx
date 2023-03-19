@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { FormControl, InputLabel, OutlinedInput, Select } from "@mui/material";
+import { FormControl, InputLabel, OutlinedInput, Select, useTheme } from "@mui/material";
 import React from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
@@ -10,9 +10,11 @@ interface CustomSelectProps {
 
 const CustomSelect: React.FC<CustomSelectProps> = ({ title }) => {
 
+  const theme = useTheme()
+
   const StyledSelect = styled(Select)({
     "& .MuiSelect-icon": {
-      color: "#1976d2",
+      color: theme.palette.info.main,
     },
   });
 
@@ -23,7 +25,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ title }) => {
       }}
     >
       <InputLabel
-        sx={{ color: "#1d3557", fontWeight: 700, letterSpacing: -0.5 }}
+        sx={{ color: theme.palette.primary.main, fontWeight: 700, letterSpacing: -0.5 }}
       >
         {title}
       </InputLabel>

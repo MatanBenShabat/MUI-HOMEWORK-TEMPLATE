@@ -1,4 +1,6 @@
 import { createTheme, Grid, ThemeProvider } from "@mui/material";
+import { PaletteColor } from "@mui/material/styles/createPalette";
+import { Theme } from "@mui/material/styles/createTheme";
 import { Box } from "@mui/system";
 import DeveloperDrillDown from "./Components/DeveloperDrilldown";
 import MissionsOverview from "./Components/MissionsOverview";
@@ -7,16 +9,40 @@ import PageHeader from "./Components/PageHeader";
 import PageTitleWrapper from "./Components/PageTitleWrapper";
 import TopCollaborators from "./Components/TopCollaborators";
 import TopCommits from "./Components/TopCommits";
-import { grey } from "@mui/material/colors";
+
+
+
 
 function App() {
+
+
+
   const theme = createTheme({
     palette: {
       mode: "light",
       primary: {
-        main: grey[200],
+        main: "#223354",
       },
+      secondary:{},
+      background:{
+        default:"#f2f5f9"
+      },
+      info:{
+        main:"#1976d2",
+      },
+      warning:{
+        main:"#ffb703",
+      },
+      text:{
+        primary:"s"
+      },
+      error:{
+        main:"red"
+      }
     },
+    
+
+
     typography: {
       fontSize: 20,
       fontFamily: [
@@ -29,30 +55,13 @@ function App() {
         '"Apple Color Emoji"',
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
-      ].join(","),
-      // headerVariant: {
-      //   fontSize: "2.5rem",
-      //   fontWeight: 700,
-      // },
-      // secTitleVariant: {
-      //   color: "#1d3557",
-      //   fontSize: "1.5rem",
-      //   fontWeight: 700,
-      //   letterSpacing: -0.5,
-      //   padding: "2vh 2vh",
-      //   display: "block",
-      // },
-      // underlineVariant: {
-      //   borderColor: "black",
-      //   borderBottom: `1.5px solid ${grey[200]}`,
-      //   display: "block",
-      // },
+      ].join(",")
     },
   });
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ backgroundColor: "#aaa", pb:"2vh" }}>
+      <Box sx={{ backgroundColor: theme.palette.background.default, pb:"2vh" }}>
         <PageTitleWrapper>
           <PageHeader />
         </PageTitleWrapper>
