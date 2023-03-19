@@ -52,7 +52,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ backgroundColor: "#aaa" }}>
+      <Box sx={{ backgroundColor: "#aaa", pb:"2vh" }}>
         <PageTitleWrapper>
           <PageHeader />
         </PageTitleWrapper>

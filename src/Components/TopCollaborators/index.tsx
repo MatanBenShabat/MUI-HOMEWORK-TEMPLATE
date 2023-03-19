@@ -18,18 +18,22 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
     backgroundColor: "#44b700",
     color: "#44b700",
-    boxShadow: `0 0 0 2px gray`,
-    "&::after": {
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-      borderRadius: "50%",
-      animation: "ripple 1.2s infinite ease-in-out",
-      border: "1px solid currentColor",
-      content: '""',
-    },
+    border: "3px solid white",
+    width:"18px",
+    height:"18px",
+    borderRadius:"50%"
+    // boxShadow: `0 0 0 2px gray`,
+    // "&::after": {
+    //   position: "absolute",
+    //   top: 0,
+    //   left: 0,
+    //   width: "100%",
+    //   height: "100%",
+    //   borderRadius: "50%",
+    //   // animation: "ripple 1.2s infinite ease-in-out",
+    //   border: "1px solid white",
+    //   content: '""',
+    // },
   },
   "@keyframes ripple": {
     "0%": {
@@ -47,18 +51,18 @@ const ListItemWrapper = styled(ListItem)({
   borderRadius: 0,
 });
 
-const LinearProgressWrapper = styled(LinearProgress)(({hi}: any)=>({
+const LinearProgressWrapper = styled(LinearProgress)(({backgroundColor}: any)=>({
   flexGrow: 1,
   marginRight: 10,
   height: 10,
   borderRadius: 5,
   [`& .${linearProgressClasses.bar}`]: {
     borderRadius: 5,
-    backgroundColor: hi,
+    backgroundColor: backgroundColor,
     
   },
   [`&.${linearProgressClasses.colorPrimary}`]: {
-    backgroundColor: "gray",
+    backgroundColor: "#e9ecef",
 
   },
 }));
@@ -92,13 +96,13 @@ const TopCollaborators = () => {
       <List disablePadding>
         {collaboratorItems.map((item, index) => (
           <React.Fragment key={index}>
-            <ListItemWrapper sx={{ py: 3.15 }}>
+            <ListItemWrapper sx={{ py: 4.3 }}>
               <StyledBadge
                 overlap="circular"
                 anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
                 variant="dot"
               >
-                <Avatar alt="Avatar" sx={{ p: "5%" }} src={item.avatar} />
+                <Avatar alt="Avatar" sx={{ p: "7%" }} src={item.avatar} />
               </StyledBadge>
               <Box
                 display="flex"
@@ -106,16 +110,13 @@ const TopCollaborators = () => {
                 flexWrap="wrap"
                 sx={{ ml: 1, flexGrow: 1 }}
               >
-                {/* <Box sx={{width:"60%",color: item.progressColor, ml:"20%"}} color={item.progressColor}> */}
+                <Box sx={{width:"60%", ml:"20%"}} color={item.progressColor}>
                 <LinearProgressWrapper
                   value={item.progress}
-                  // color="inherit"
-                  hi={item.progressColor}
-                  
-                  // style={{ backgroundColor: "inherit" }}
+                  backgroundColor={item.progressColor}
                   variant="determinate"
                 />
-                {/* </Box> */}
+                </Box>
                 <Typography
                   variant="h6"
                   fontWeight={700}
