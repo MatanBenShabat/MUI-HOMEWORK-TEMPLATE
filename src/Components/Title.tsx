@@ -14,7 +14,7 @@ const Title: React.FC<TitleProps> = ({ title }) => {
           fontSize: "1.5rem",
           fontWeight: 700,
           letterSpacing: -0.5,
-          padding: "2vh 2vh",
+          padding: "3vh 2vh",
           display: "block",
         }}
       >

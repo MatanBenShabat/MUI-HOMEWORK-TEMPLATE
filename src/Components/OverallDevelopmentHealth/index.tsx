@@ -2,7 +2,6 @@ import {
   Divider,
   CardContent,
   Avatar,
-  Card,
   ListItemText,
   List,
   ListItem,

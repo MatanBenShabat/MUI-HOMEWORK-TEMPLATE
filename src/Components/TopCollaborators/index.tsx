@@ -10,7 +10,9 @@ import {
 } from "@mui/material";
 import React from "react";
 import TitledComponent from "../TitledComponent";
-import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+import LinearProgress, {
+  linearProgressClasses,
+} from "@mui/material/LinearProgress";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -45,40 +47,43 @@ const ListItemWrapper = styled(ListItem)({
   borderRadius: 0,
 });
 
-const LinearProgressWrapper = styled(LinearProgress)({
+const LinearProgressWrapper = styled(LinearProgress)(({hi}: any)=>({
   flexGrow: 1,
   marginRight: 10,
   height: 10,
   borderRadius: 5,
   [`& .${linearProgressClasses.bar}`]: {
     borderRadius: 5,
+    backgroundColor: hi,
+    
   },
+  [`&.${linearProgressClasses.colorPrimary}`]: {
+    backgroundColor: "gray",
 
-
-});
-
+  },
+}));
 
 const TopCollaborators = () => {
   const collaboratorItems = [
     {
       avatar: "/static/images/avatar/1.jpg",
       progress: 57,
-      progressColor: "#F44336",
+      progressColor: "#ff0a54",
     },
     {
       avatar: "/static/images/avatar/2.jpg",
       progress: 57,
-      progressColor: "#FF9800",
+      progressColor: "#ffb703",
     },
     {
       avatar: "/static/images/avatar/3.jpg",
       progress: 57,
-      progressColor: "#4CAF50",
+      progressColor: "#29bf12",
     },
     {
       avatar: "/static/images/avatar/4.jpg",
       progress: 57,
-      progressColor: "#2196F3",
+      progressColor: "#4cc9f0",
     },
   ];
 
@@ -93,7 +98,7 @@ const TopCollaborators = () => {
                 anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
                 variant="dot"
               >
-                <Avatar alt="Avatar" src={item.avatar} />
+                <Avatar alt="Avatar" sx={{ p: "5%" }} src={item.avatar} />
               </StyledBadge>
               <Box
                 display="flex"
@@ -101,13 +106,16 @@ const TopCollaborators = () => {
                 flexWrap="wrap"
                 sx={{ ml: 1, flexGrow: 1 }}
               >
-                <Box sx={{width:"60%",color: item.progressColor, ml:"20%"}} color={item.progressColor}>
-                  <LinearProgressWrapper
-                    value={item.progress}
-                    color="inherit"
-                    variant="determinate"
-                  />
-                </Box>
+                {/* <Box sx={{width:"60%",color: item.progressColor, ml:"20%"}} color={item.progressColor}> */}
+                <LinearProgressWrapper
+                  value={item.progress}
+                  // color="inherit"
+                  hi={item.progressColor}
+                  
+                  // style={{ backgroundColor: "inherit" }}
+                  variant="determinate"
+                />
+                {/* </Box> */}
                 <Typography
                   variant="h6"
                   fontWeight={700}

@@ -50,6 +50,7 @@ const TopCommits = () => {
                 // variant: 'h6',
                 sx: {
                   mt: 1,
+                  ml:1,
                   fontSize: "1.5rem",
                   color: "#1d3557",
                 },
@@ -157,6 +158,7 @@ const TopCommits = () => {
                 variant: "h6",
                 sx: {
                   mt: 1,
+                  ml:1,
                   fontSize: "1.5rem",
                   color: "#1d3557",
                 },
@@ -264,6 +266,7 @@ const TopCommits = () => {
                 variant: "h6",
                 sx: {
                   mt: 1,
+                  ml:1,
                   fontSize: "1.5rem",
                   color: "#1d3557",
                 },
