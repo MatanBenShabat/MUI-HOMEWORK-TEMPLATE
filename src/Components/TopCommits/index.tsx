@@ -34,7 +34,7 @@ const TopCommits = () => {
           <ListItem
             sx={{
               display: { xs: "block", sm: "flex" },
-              p: "1.45% 0px"
+              p: "1.45% 0"
             }}
             disableGutters
             alignItems="flex-start"
@@ -141,7 +141,7 @@ const TopCommits = () => {
           <ListItem
             sx={{
               display: { xs: "block", sm: "flex" },
-              p: "1.45% 0px"
+              p: "1.45% 0"
             }}
             disableGutters
             alignItems="flex-start"
@@ -248,7 +248,7 @@ const TopCommits = () => {
           <ListItem
             sx={{
               display: { xs: "block", sm: "flex" },
-              p: "1.45% 0px"
+              p: "1.45% 0"
             }}
             disableGutters
             alignItems="flex-start"
