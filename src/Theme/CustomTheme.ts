@@ -1,5 +1,4 @@
 import { createTheme } from '@mui/material';
-import '@mui/lab/themeAugmentation';
 
 
 export const CustomTheme = createTheme({
@@ -10,13 +9,13 @@ export const CustomTheme = createTheme({
     lightBlue: "#4cc9f0",
     darkBlue: "#223354",
     green: "#3CD500",
-    lightGreen: "#89fc00",
+    lightGreen: "rgba(137, 252, 0, 0.3)",
     orange: "#ffb703",
     lightOrange: "rgba(255, 221, 161, 0.3)",
     red: "#ff0a54",
     lightRed: "#ffccd5",
     gray: "gray",
-    lightGray: "#adb5bd"
+    lightGray: "#e9ecef"
   },
   typography: {
     fontSize: 20,

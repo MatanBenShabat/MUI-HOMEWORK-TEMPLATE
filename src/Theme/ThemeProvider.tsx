@@ -2,24 +2,20 @@ import React from "react";
 import { ThemeProvider } from "@mui/material";
 import { themeCreator } from "./base";
 
-//   // @ts-ignore
-//   stylisPlugins: [stylisRTLPlugin]
-// });
 
-export const ThemeContext = React.createContext(
-  (themeName: string): void => {}
-);
-
-interface ThemeProviderWrapperRops {
+interface ThemeProviderWrapperProps {
   children: any;
 }
 
-const ThemeProviderWrapper: React.FC<ThemeProviderWrapperRops> = ({
+const ThemeProviderWrapper: React.FC<ThemeProviderWrapperProps> = ({
   children,
 }) => {
   const theme = themeCreator("CustomTheme");
+  
 
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  return <ThemeProvider theme={theme}>
+    {children}
+    </ThemeProvider>;
 };
 
 export default ThemeProviderWrapper;

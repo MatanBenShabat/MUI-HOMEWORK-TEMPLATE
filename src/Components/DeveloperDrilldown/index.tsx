@@ -1,7 +1,7 @@
 import React from "react";
 import { DATA } from "../../mock/mock";
-import CustomSelect from "../CustomSelect";
-import TitledComponent from "../TitledComponent";
+import CustomSelect from "../Custom Components/CustomSelect";
+import TitledComponent from "../Custom Components/TitledComponent";
 import Diagram from "./Diagram";
 import Graphs from "./Graphs";
 import { Box, Divider } from "@mui/material";

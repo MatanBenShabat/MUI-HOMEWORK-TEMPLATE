@@ -1,4 +1,3 @@
-import styled from "@emotion/styled";
 import {
   Box,
   Divider,
@@ -7,33 +6,23 @@ import {
   ListItem,
   Badge,
   Avatar,
+  styled,
+  useTheme
 } from "@mui/material";
 import React from "react";
-import TitledComponent from "../TitledComponent";
+import TitledComponent from "../Custom Components/TitledComponent";
 import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
-    backgroundColor: "#44b700",
-    color: "#44b700",
+    backgroundColor: theme.colors.green,
+    color: theme.colors.green,
     border: "3px solid white",
     width:"18px",
     height:"18px",
     borderRadius:"50%"
-    // boxShadow: `0 0 0 2px gray`,
-    // "&::after": {
-    //   position: "absolute",
-    //   top: 0,
-    //   left: 0,
-    //   width: "100%",
-    //   height: "100%",
-    //   borderRadius: "50%",
-    //   // animation: "ripple 1.2s infinite ease-in-out",
-    //   border: "1px solid white",
-    //   content: '""',
-    // },
   },
   "@keyframes ripple": {
     "0%": {
@@ -51,7 +40,7 @@ const ListItemWrapper = styled(ListItem)({
   borderRadius: 0,
 });
 
-const LinearProgressWrapper = styled(LinearProgress)(({backgroundcolor}: any)=>({
+const LinearProgressWrapper: any = styled(LinearProgress)(({theme,backgroundcolor}: any)=>({
   flexGrow: 1,
   marginRight: 10,
   height: 10,
@@ -62,32 +51,33 @@ const LinearProgressWrapper = styled(LinearProgress)(({backgroundcolor}: any)=>(
     
   },
   [`&.${linearProgressClasses.colorPrimary}`]: {
-    backgroundColor: "#e9ecef",
+    backgroundColor: theme.colors.lightGray,
 
   },
 }));
 
 const TopCollaborators = () => {
+  const theme = useTheme()
   const collaboratorItems = [
     {
       avatar: "/static/images/avatar/1.jpg",
       progress: 57,
-      progressColor: "#ff0a54",
+      progressColor: theme.colors.red,
     },
     {
       avatar: "/static/images/avatar/2.jpg",
       progress: 57,
-      progressColor: "#ffb703",
+      progressColor: theme.colors.orange,
     },
     {
       avatar: "/static/images/avatar/3.jpg",
       progress: 57,
-      progressColor: "#29bf12",
+      progressColor: theme.colors.green,
     },
     {
       avatar: "/static/images/avatar/4.jpg",
       progress: 57,
-      progressColor: "#4cc9f0",
+      progressColor: theme.colors.lightBlue,
     },
   ];
 
@@ -121,7 +111,6 @@ const TopCollaborators = () => {
                   variant="h6"
                   fontWeight={700}
                   ml={1}
-                  color="text.primary"
                 >{`${item.progress}%`}</Typography>
               </Box>
             </ListItemWrapper>

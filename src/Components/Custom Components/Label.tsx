@@ -32,8 +32,8 @@ const LabelWrapper = styled('span')(
           color: greenyellow
         }
         &-success {
-          background-color: rgba(137, 252, 0, 0.3);
-          color:  #29bf12;
+          background-color: ${theme.colors.lightGreen};
+          color:  ${theme.colors.green};
           font-weight: 600;
           font-size: 1.2rem;
           padding: 6px 14px;
@@ -44,7 +44,7 @@ const LabelWrapper = styled('span')(
 
 const Label: FC<LabelProps> = ({
   className,
-  color = 'red',
+  color = '',
   children,
   ...rest
 }) => {

@@ -53,8 +53,8 @@ const GaugeWrapper = styled(CircularProgressbarWithChildren)(
       font-size: 0.6rem;
       dominant-baseline: middle;
       text-anchor: middle;
-      font-weight: bold;
-      background: blue;
+      font-weight: 600;
+      font-family: ${theme.typography.fontFamily};
     }
   
     &.MuiGauge {
@@ -85,15 +85,15 @@ const GaugeWrapper = styled(CircularProgressbarWithChildren)(
       &-primary {
 
         .CircularProgressbar-path {
-          stroke: ${theme.palette.success.main};
+          stroke: ${theme.colors.green};
         }
     
         .CircularProgressbar-trail {
-          stroke: #e9ecef;
+          stroke: ${theme.colors.lightGray};
         }
     
         .CircularProgressbar-text {
-          fill: ${theme.palette.success.main};
+          fill: ${theme.colors.green};
         }
     
         .CircularProgressbar-background {

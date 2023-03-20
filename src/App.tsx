@@ -1,20 +1,18 @@
-import {  Grid, useTheme } from "@mui/material";
-import { Box } from "@mui/system";
+import { Grid } from "@mui/material";
 import DeveloperDrillDown from "./Components/DeveloperDrilldown";
 import MissionsOverview from "./Components/MissionsOverview";
 import OverallDevelopmentHealth from "./Components/OverallDevelopmentHealth";
-import PageHeader from "./Components/PageHeader";
+import PageHeader from "./Components/Custom Components/PageHeader";
 import PageTitleWrapper from "./Components/PageTitleWrapper";
 import TopCollaborators from "./Components/TopCollaborators";
 import TopCommits from "./Components/TopCommits";
-import ThemeProvider from './Theme/ThemeProvider';
-
+import ThemeProvider from "./Theme/ThemeProvider";
+import Container from "./Components/Custom Components/Container";
 
 function App() {
-  const theme = useTheme();
   return (
     <ThemeProvider>
-      <Box sx={{ backgroundColor: theme.palette.background.default, pb:"2vh" }}>
+      <Container>
         <PageTitleWrapper>
           <PageHeader />
         </PageTitleWrapper>
@@ -33,7 +31,7 @@ function App() {
           <MissionsOverview />
           <TopCollaborators />
         </Grid>
-      </Box>
+      </Container>
     </ThemeProvider>
   );
 }

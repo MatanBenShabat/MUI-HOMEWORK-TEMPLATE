@@ -11,10 +11,11 @@ interface CustomSelectProps {
 const CustomSelect: React.FC<CustomSelectProps> = ({ title }) => {
 
   const theme = useTheme()
+  
 
   const StyledSelect = styled(Select)({
     "& .MuiSelect-icon": {
-      color: theme.palette.info.main,
+      color: theme.colors.blue,
     },
   });
 
@@ -25,7 +26,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ title }) => {
       }}
     >
       <InputLabel
-        sx={{ color: theme.palette.primary.main, fontWeight: 700, letterSpacing: -0.5 }}
+        sx={{ color: theme.colors.darkBlue, fontWeight: 700, letterSpacing: -0.5 }}
       >
         {title}
       </InputLabel>

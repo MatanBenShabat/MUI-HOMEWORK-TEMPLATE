@@ -112,7 +112,7 @@ const Graph: React.FC<GraphProps> = ({ data, chartName, subtitle }) => {
           <Typography variant="subtitle1" color={"gray"} fontWeight={600} gutterBottom>
             {chartName}
           </Typography>
-          <Typography variant="h5" color={theme.palette.primary.main} sx={{fontWeight: "700"}}>
+          <Typography variant="h5" color={theme.colors.darkBlue} sx={{fontWeight: "700"}}>
             {subtitle}
           </Typography>
         </Box>

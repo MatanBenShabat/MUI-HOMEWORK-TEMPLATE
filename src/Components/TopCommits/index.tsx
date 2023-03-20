@@ -1,3 +1,4 @@
+import { useTheme } from "@mui/material";
 import styled from "@emotion/styled";
 import {
   Avatar,
@@ -12,9 +13,8 @@ import {
   Typography,
   CardActions,
 } from "@mui/material";
-import React from "react";
-import Label from "../Label";
-import TitledComponent from "../TitledComponent";
+import Label from "../Custom Components/Label";
+import TitledComponent from "../Custom Components/TitledComponent";
 
 const AvatarLight = styled(Avatar)(
   ({ theme }) => `
@@ -27,6 +27,8 @@ const AvatarLight = styled(Avatar)(
 );
 
 const TopCommits = () => {
+
+  const theme = useTheme()
   return (
     <TitledComponent xs={7} title={"Top Commits"}>
       <CardContent>
@@ -52,7 +54,7 @@ const TopCommits = () => {
                   mt: 1,
                   ml:1,
                   fontSize: "1.5rem",
-                  color: "#1d3557",
+                  color: theme.colors.darkBlue,
                 },
                 gutterBottom: true,
                 noWrap: true,
@@ -85,7 +87,7 @@ const TopCommits = () => {
                         variant="h5"
                         sx={{
                           mr: 1,
-                          color: "#1d3557",
+                          color: theme.colors.darkBlue,
                         }}
                       >
                         84.873
@@ -108,7 +110,7 @@ const TopCommits = () => {
                         variant="h5"
                         sx={{
                           mr: 1,
-                          color: "#1d3557",
+                          color: theme.colors.darkBlue,
                         }}
                       >
                         15.694
@@ -126,7 +128,7 @@ const TopCommits = () => {
               alignSelf="center"
             >
               <Button
-                sx={{ color: "#2667ff", pr: "10px", textTransform: "none", }}
+                sx={{ color: theme.colors.link, pr: "10px", textTransform: "none", }}
                 size="small"
                 href="#"
               >
@@ -160,7 +162,7 @@ const TopCommits = () => {
                   mt: 1,
                   ml:1,
                   fontSize: "1.5rem",
-                  color: "#1d3557",
+                  color: theme.colors.darkBlue,
                 },
                 gutterBottom: true,
                 noWrap: true,
@@ -193,7 +195,7 @@ const TopCommits = () => {
                         variant="h5"
                         sx={{
                           mr: 1,
-                          color: "#1d3557",
+                          color: theme.colors.darkBlue,
                         }}
                       >
                         84.873
@@ -216,7 +218,7 @@ const TopCommits = () => {
                         variant="h5"
                         sx={{
                           mr: 1,
-                          color: "#1d3557",
+                          color: theme.colors.darkBlue,
                         }}
                       >
                         15.694
@@ -234,7 +236,7 @@ const TopCommits = () => {
               alignSelf="center"
             >
               <Button
-                sx={{ color: "#2667ff", pr: "10px", textTransform: "none" }}
+                sx={{ color: theme.colors.link, pr: "10px", textTransform: "none" }}
                 size="small"
                 href="#"
               >
@@ -268,7 +270,7 @@ const TopCommits = () => {
                   mt: 1,
                   ml:1,
                   fontSize: "1.5rem",
-                  color: "#1d3557",
+                  color: theme.colors.darkBlue,
                 },
                 gutterBottom: true,
                 noWrap: true,
@@ -301,7 +303,7 @@ const TopCommits = () => {
                         variant="h5"
                         sx={{
                           mr: 1,
-                          color: "#1d3557",
+                          color: theme.colors.darkBlue,
                         }}
                       >
                         84.873
@@ -324,7 +326,7 @@ const TopCommits = () => {
                         variant="h5"
                         sx={{
                           mr: 1,
-                          color: "#1d3557",
+                          color: theme.colors.darkBlue,
                         }}
                       >
                         15.694
@@ -342,7 +344,7 @@ const TopCommits = () => {
               alignSelf="center"
             >
               <Button
-                sx={{ color: "#2667ff", pr: "10px", textTransform: "none" }}
+                sx={{ color: theme.colors.link, pr: "10px", textTransform: "none" }}
                 size="small"
                 href="#"
               >
@@ -360,7 +362,7 @@ const TopCommits = () => {
           justifyContent: 'center',
         }}
       >
-        <Button size="small" variant="contained" sx={{backgroundColor:"#2667ff", color:"white", fontSize:"1.3rem", borderRadius:"10px", p:"6px 20px", boxShadow:"none", textTransform:"none", fontWeight:"600"}}>
+        <Button size="small" variant="contained" sx={{backgroundColor:theme.colors.link, color:"white", fontSize:"1.3rem", borderRadius:"10px", p:"6px 20px", boxShadow:"none", textTransform:"none", fontWeight:"600"}}>
           {'Commit History View'}
         </Button>
       </CardActions>

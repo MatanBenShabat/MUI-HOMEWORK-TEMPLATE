@@ -11,7 +11,7 @@ const Title: React.FC<TitleProps> = ({ title }) => {
     <>
       <Typography
         sx={{
-          color: theme.palette.primary.main,
+          color: theme.colors.darkBlue,
           fontSize: "1.5rem",
           fontWeight: 700,
           letterSpacing: -0.5,

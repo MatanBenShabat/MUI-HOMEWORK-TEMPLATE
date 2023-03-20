@@ -14,29 +14,29 @@ import TrendingFlat from "@mui/icons-material/TrendingFlat";
 import { buildStyles } from "react-circular-progressbar";
 import { DATA } from "../../mock/mock";
 import Gauge from "../Gauge";
-import TitledComponent from "../TitledComponent";
+import TitledComponent from "../Custom Components/TitledComponent";
 
 const AvatarWrapperError = styled(Avatar)(
   ({ theme }) => `
-      background-color: #ffccd5;
+      background-color: ${theme.colors.lightRed};
       padding: 7px;
-      color:  #ff0a54;
+      color:  ${theme.colors.red};
 `
 );
 
 const AvatarWrapperSuccess = styled(Avatar)(
   ({ theme }) => `
-      background-color: rgba(137, 252, 0, 0.3);
+      background-color: ${theme.colors.lightGreen};
       padding: 7px;
-      color:  #57CA22;
+      color:  ${theme.colors.green};
 `
 );
 
 const AvatarWrapperWarning = styled(Avatar)(
   ({ theme }) => `
-      background-color: rgba(255, 221, 161, 0.3);
+      background-color: ${theme.colors.lightOrange};
       padding: 7px;
-      color:  #ffb703;
+      color:  ${theme.colors.orange};
 `
 );
 
