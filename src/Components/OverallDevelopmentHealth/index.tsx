@@ -28,7 +28,7 @@ const AvatarWrapperSuccess = styled(Avatar)(
   ({ theme }) => `
       background-color: rgba(137, 252, 0, 0.3);
       padding: 7px;
-      color:  #29bf12;
+      color:  #57CA22;
 `
 );
 

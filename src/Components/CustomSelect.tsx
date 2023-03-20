@@ -31,7 +31,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ title }) => {
       </InputLabel>
       <StyledSelect
         IconComponent={KeyboardArrowDownIcon}
-        sx={{ borderRadius: 3, color: "primary.main"}}
+        sx={{ borderRadius: 3}}
         multiple
         input={<OutlinedInput label={title} />}
       ></StyledSelect>

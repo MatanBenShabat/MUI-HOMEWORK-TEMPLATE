@@ -9,7 +9,7 @@ const Graphs = () => {
       
 
       {DATA.graphs.map((e, i) => {
-        return <Graph data={e.data} chartName={e.name} subtitle={e.subtitle} />;
+        return <Graph key={i} data={e.data} chartName={e.name} subtitle={e.subtitle} />;
       })}
     </Grid>
   );

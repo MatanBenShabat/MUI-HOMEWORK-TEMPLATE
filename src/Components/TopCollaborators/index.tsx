@@ -51,14 +51,14 @@ const ListItemWrapper = styled(ListItem)({
   borderRadius: 0,
 });
 
-const LinearProgressWrapper = styled(LinearProgress)(({backgroundColor}: any)=>({
+const LinearProgressWrapper = styled(LinearProgress)(({backgroundcolor}: any)=>({
   flexGrow: 1,
   marginRight: 10,
   height: 10,
   borderRadius: 5,
   [`& .${linearProgressClasses.bar}`]: {
     borderRadius: 5,
-    backgroundColor: backgroundColor,
+    backgroundColor: backgroundcolor,
     
   },
   [`&.${linearProgressClasses.colorPrimary}`]: {
@@ -113,7 +113,7 @@ const TopCollaborators = () => {
                 <Box sx={{width:"60%", ml:"20%"}} color={item.progressColor}>
                 <LinearProgressWrapper
                   value={item.progress}
-                  backgroundColor={item.progressColor}
+                  backgroundcolor={item.progressColor}
                   variant="determinate"
                 />
                 </Box>

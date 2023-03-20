@@ -1,4 +1,4 @@
-import { Divider, Grid, Typography } from "@mui/material";
+import { Divider, Grid, Typography, useTheme } from "@mui/material";
 import { Box } from "@mui/system";
 import Chart from "react-apexcharts";
 import React from "react";
@@ -84,6 +84,8 @@ interface GraphProps {
 }
 
 const Graph: React.FC<GraphProps> = ({ data, chartName, subtitle }) => {
+
+  const theme = useTheme()
   return (
     <Grid
       xs={4}
@@ -107,10 +109,10 @@ const Graph: React.FC<GraphProps> = ({ data, chartName, subtitle }) => {
         }}
       >
         <Box>
-          <Typography variant="subtitle2" gutterBottom>
+          <Typography variant="subtitle1" color={"gray"} fontWeight={600} gutterBottom>
             {chartName}
           </Typography>
-          <Typography variant="h5" sx={{fontWeight: "700"}}>
+          <Typography variant="h5" color={theme.palette.primary.main} sx={{fontWeight: "700"}}>
             {subtitle}
           </Typography>
         </Box>
