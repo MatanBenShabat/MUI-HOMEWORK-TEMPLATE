@@ -7,22 +7,23 @@ import {
   Badge,
   Avatar,
   styled,
-  useTheme
+  useTheme,
 } from "@mui/material";
 import React from "react";
 import TitledComponent from "../Custom Components/TitledComponent";
 import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
+import { OnlineUser } from "../../mock/mock";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
     backgroundColor: theme.colors.green,
     color: theme.colors.green,
     border: "3px solid white",
-    width:"18px",
-    height:"18px",
-    borderRadius:"50%"
+    width: "18px",
+    height: "18px",
+    borderRadius: "50%",
   },
   "@keyframes ripple": {
     "0%": {
@@ -40,44 +41,45 @@ const ListItemWrapper = styled(ListItem)({
   borderRadius: 0,
 });
 
-const LinearProgressWrapper: any = styled(LinearProgress)(({theme,backgroundcolor}: any)=>({
-  flexGrow: 1,
-  marginRight: 10,
-  height: 10,
-  borderRadius: 5,
-  [`& .${linearProgressClasses.bar}`]: {
+const LinearProgressWrapper: any = styled(LinearProgress)(
+  ({ theme, backgroundcolor }: any) => ({
+    flexGrow: 1,
+    marginRight: 10,
+    height: 10,
     borderRadius: 5,
-    backgroundColor: backgroundcolor,
-    
-  },
-  [`&.${linearProgressClasses.colorPrimary}`]: {
-    backgroundColor: theme.colors.lightGray,
-
-  },
-}));
+    [`& .${linearProgressClasses.bar}`]: {
+      borderRadius: 5,
+      backgroundColor: backgroundcolor,
+    },
+    [`&.${linearProgressClasses.colorPrimary}`]: {
+      backgroundColor: theme.colors.lightGray,
+    },
+  })
+);
 
 const TopCollaborators = () => {
-  const theme = useTheme()
+  const theme = useTheme();
   const collaboratorItems = [
     {
-      avatar: "/static/images/avatar/1.jpg",
+      avatar: OnlineUser.avatar,
       progress: 57,
       progressColor: theme.colors.red,
     },
     {
-      avatar: "/static/images/avatar/2.jpg",
+      avatar: OnlineUser.avatar,
+      progress: 57,
+      progressColor: theme.colors.lightBlue,
+    },
+    {
+      avatar: OnlineUser.avatar,
       progress: 57,
       progressColor: theme.colors.orange,
     },
     {
-      avatar: "/static/images/avatar/3.jpg",
+      avatar: OnlineUser.avatar,
       progress: 57,
       progressColor: theme.colors.green,
-    },
-    {
-      avatar: "/static/images/avatar/4.jpg",
-      progress: 57,
-      progressColor: theme.colors.lightBlue,
+
     },
   ];
 
@@ -92,7 +94,17 @@ const TopCollaborators = () => {
                 anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
                 variant="dot"
               >
-                <Avatar alt="Avatar" sx={{ p: "7%" }} src={item.avatar} />
+                <Avatar sx={{ p: "7%", overflow: "hidden" }}>
+                  <img
+                    alt="Avatar"
+                    src={item.avatar}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      transform: "scale(1.2)",
+                    }}
+                  />
+                </Avatar>
               </StyledBadge>
               <Box
                 display="flex"
@@ -100,12 +112,15 @@ const TopCollaborators = () => {
                 flexWrap="wrap"
                 sx={{ ml: 1, flexGrow: 1 }}
               >
-                <Box sx={{width:"60%", ml:"20%"}} color={item.progressColor}>
-                <LinearProgressWrapper
-                  value={item.progress}
-                  backgroundcolor={item.progressColor}
-                  variant="determinate"
-                />
+                <Box
+                  sx={{ width: "60%", ml: "20%" }}
+                  color={item.progressColor}
+                >
+                  <LinearProgressWrapper
+                    value={item.progress}
+                    backgroundcolor={item.progressColor}
+                    variant="determinate"
+                  />
                 </Box>
                 <Typography
                   variant="h6"
