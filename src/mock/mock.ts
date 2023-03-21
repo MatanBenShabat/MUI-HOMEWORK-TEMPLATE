@@ -48,27 +48,25 @@ export const DATA = {
   ],
   overallDevelopmentHealth: {
     percentage: 75,
-    rankRate: 127,
-    impact: 1.389,
-    spend: 15793,
   },
-  commits:[{
-    commitNumber: CommitNumber.ONE,
-    subtitle: "lines of code",
-    commitOrder: CommitOrder.A,
-    secondSubtitle: "survivability",
-  },
-  {
-    commitNumber: CommitNumber.TWO,
-    subtitle: "lines of code",
-    commitOrder: CommitOrder.B,
-    secondSubtitle: "survivability"
-  },
-  {
-    commitNumber: CommitNumber.THREE,
-    subtitle: "impressions",
-    commitOrder: CommitOrder.C,
-    secondSubtitle: "Clicks"
-  },
-]
+  commits: [
+    {
+      commitNumber: CommitNumber.ONE,
+      subtitle: "lines of code",
+      commitOrder: CommitOrder.A,
+      secondSubtitle: "survivability",
+    },
+    {
+      commitNumber: CommitNumber.TWO,
+      subtitle: "lines of code",
+      commitOrder: CommitOrder.B,
+      secondSubtitle: "survivability",
+    },
+    {
+      commitNumber: CommitNumber.THREE,
+      subtitle: "impressions",
+      commitOrder: CommitOrder.C,
+      secondSubtitle: "Clicks",
+    },
+  ],
 };

@@ -31,27 +31,37 @@ export interface GraphProps {
 }
 
 export interface MissionProps {
-    avatarBgColor: string;
-    avatarShadowColor: string;
-    seeReferrals: boolean;
-    icon: any;
-    title: string;
-    subtitle: string;
-  }
+  avatarBgColor: string;
+  avatarShadowColor: string;
+  seeReferrals: boolean;
+  icon: any;
+  title: string;
+  subtitle: string;
+}
 
-  export enum CommitOrder {
-    A ="A",
-    B="B",
-    C="C"
-  }
-  export enum CommitNumber {
-    ONE ="1",
-    TWO="2",
-    THREE="3"
-  }
-  export interface CommitProps {
-    commitNumber: CommitNumber;
-    subtitle: string;
-    commitOrder: CommitOrder;
-    secondSubtitle: string;
+export enum CommitOrder {
+  A = "A",
+  B = "B",
+  C = "C",
+}
+export enum CommitNumber {
+  ONE = "1",
+  TWO = "2",
+  THREE = "3",
+}
+export interface CommitProps {
+  commitNumber: CommitNumber;
+  subtitle: string;
+  commitOrder: CommitOrder;
+  secondSubtitle: string;
+}
+
+export interface OverallProps {
+  children: any;
+  value: string;
+  title: string;
+}
+
+export interface CustomSelectProps {
+    title: string
   }

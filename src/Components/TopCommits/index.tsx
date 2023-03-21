@@ -1,20 +1,13 @@
-import { useTheme } from "@mui/material";
-import {
-  Divider,
-  CardContent,
-  Button,
-  List,
-  CardActions,
-} from "@mui/material";
+import {  useTheme } from "@mui/material";
+import { Divider, CardContent, Button, List, CardActions } from "@mui/material";
 import { DATA } from "../../mock/mock";
 import TitledComponent from "../Custom Components/TitledComponent";
 import Commit from "./Commit";
 
-
 const TopCommits = () => {
   const theme = useTheme();
   return (
-    <TitledComponent xs={7} title={"Top Commits"} minHeight="92.5vh">
+    <TitledComponent xs={7} title={"Top Commits"} minHeight="93vh">
       <CardContent>
         <List component="div" disablePadding>
           {DATA.commits.map((item, i) => {
@@ -36,12 +29,13 @@ const TopCommits = () => {
             );
           })}
         </List>
+
         <CardActions
           sx={{
-            py: 4,
-            height: "100%",
-            flex: 1,
+            height: "11vh",
+            display: "flex",
             justifyContent: "center",
+            alignItems: "center",
           }}
         >
           <Button

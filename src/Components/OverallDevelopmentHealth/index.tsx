@@ -2,9 +2,7 @@ import {
   Divider,
   CardContent,
   Avatar,
-  ListItemText,
   List,
-  ListItem,
   styled,
 } from "@mui/material";
 import React from "react";
@@ -15,6 +13,7 @@ import { buildStyles } from "react-circular-progressbar";
 import { DATA } from "../../mock/mock";
 import Gauge from "../Gauge";
 import TitledComponent from "../Custom Components/TitledComponent";
+import Overall from "./Overall";
 
 const AvatarWrapperError = styled(Avatar)(
   ({ theme }) => `
@@ -41,8 +40,45 @@ const AvatarWrapperWarning = styled(Avatar)(
 );
 
 const OverallDevelopmentHealth = () => {
+  const overall = [
+    {
+      value: "127",
+      title: "Rank Rate",
+      children: (
+        <AvatarWrapperError>
+          <TrendingDown />
+        </AvatarWrapperError>
+      ),
+      divider: true,
+    },
+    {
+      value: "1.389",
+      title: "Impact",
+      children: (
+        <AvatarWrapperWarning>
+          <TrendingFlat />
+        </AvatarWrapperWarning>
+      ),
+      divider: true,
+    },
+    {
+      value: "$15,793.00",
+      title: "Spend",
+      children: (
+        <AvatarWrapperSuccess>
+          <TrendingUp />
+        </AvatarWrapperSuccess>
+      ),
+      divider: false,
+    },
+  ];
+
   return (
-    <TitledComponent xs={5} title={"Overall Development Health"} minHeight="92.5vh">
+    <TitledComponent
+      xs={5}
+      title={"Overall Development Health"}
+      minHeight="93vh"
+    >
       <CardContent>
         <Gauge
           circleRatio={0.65}
@@ -55,80 +91,25 @@ const OverallDevelopmentHealth = () => {
         />
 
         <List disablePadding dense>
-          <ListItem>
-            <ListItemText
-              primary={"Rank Rate"}
-              primaryTypographyProps={{
-                variant: "subtitle2",
-                color: "gray",
-                gutterBottom: true,
-                noWrap: true,
-              }}
-              secondary={DATA.overallDevelopmentHealth.rankRate}
-              secondaryTypographyProps={{
-                variant: "h5",
-                color: "#1d3557",
-                fontWeight: "600",
-                noWrap: true,
-              }}
-            />
-            <AvatarWrapperError>
-              <TrendingDown />
-            </AvatarWrapperError>
-          </ListItem>
-          <Divider
-            sx={{
-              my: 1,
-            }}
-          />
-          <ListItem>
-            <ListItemText
-              primary={"Impact"}
-              primaryTypographyProps={{
-                variant: "subtitle2",
-                color: "gray",
-                gutterBottom: true,
-                noWrap: true,
-              }}
-              secondary={DATA.overallDevelopmentHealth.impact}
-              secondaryTypographyProps={{
-                variant: "h5",
-                color: "#1d3557",
-                fontWeight: "600",
-
-              }}
-            />
-            <AvatarWrapperWarning>
-              <TrendingFlat />
-            </AvatarWrapperWarning>
-          </ListItem>
-          <Divider
-            sx={{
-              my: 1,
-            }}
-          />
-          <ListItem>
-            <ListItemText
-              primary={"Spend"}
-              primaryTypographyProps={{
-                variant: "subtitle2",
-                color: "gray",
-
-                gutterBottom: true,
-                noWrap: true,
-              }}
-              secondary={DATA.overallDevelopmentHealth.spend}
-              secondaryTypographyProps={{
-                variant: "h5",
-                color: "#1d3557",
-                fontWeight: "600",
-
-              }}
-            />
-            <AvatarWrapperSuccess>
-              <TrendingUp />
-            </AvatarWrapperSuccess>
-          </ListItem>
+          {overall.map((item, i) => {
+            return (
+              <>
+                <Overall
+                  key={i}
+                  children={item.children}
+                  title={item.title}
+                  value={item.value}
+                />
+                {item.divider && (
+                  <Divider
+                    sx={{
+                      my: 1,
+                    }}
+                  />
+                )}
+              </>
+            );
+          })}
         </List>
       </CardContent>
     </TitledComponent>

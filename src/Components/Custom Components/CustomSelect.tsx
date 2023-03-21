@@ -2,11 +2,7 @@ import styled from "@emotion/styled";
 import { FormControl, InputLabel, OutlinedInput, Select, useTheme } from "@mui/material";
 import React from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-
-interface CustomSelectProps {
-  title: string
-}
-
+import { CustomSelectProps } from "../../types";
 
 const CustomSelect: React.FC<CustomSelectProps> = ({ title }) => {
 

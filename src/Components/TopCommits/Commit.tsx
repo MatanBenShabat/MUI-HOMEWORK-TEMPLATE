@@ -70,6 +70,7 @@ const Commit: React.FC<CommitProps> = ({ commitOrder, commitNumber, subtitle, se
               <Typography
                 component="div"
                 gutterBottom
+                color={"gray"}
               >
                 {subtitle}
               </Typography>
@@ -92,7 +93,7 @@ const Commit: React.FC<CommitProps> = ({ commitOrder, commitNumber, subtitle, se
                 component="div"
                 variant="body2"
                 gutterBottom
-                color="text.secondary"
+                color={"gray"}
               >
                 {secondSubtitle}
               </Typography>
