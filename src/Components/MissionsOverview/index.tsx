@@ -2,7 +2,7 @@ import { Grid, useTheme } from "@mui/material";
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 import AnnouncementOutlinedIcon from "@mui/icons-material/AnnouncementOutlined";
 import PendingActionsOutlinedIcon from "@mui/icons-material/PendingActionsOutlined";
-import CustomMission from "./CustomMission";
+import Mission from "./Mission";
 
 const MissionsOverview = () => {
   const theme = useTheme();
@@ -12,7 +12,7 @@ const MissionsOverview = () => {
       avatarBgColor: theme.colors.green,
       avatarShadowColor: theme.colors.lightGreen,
       seeReferrals: false,
-      CustomIcon: (
+      icon: (
         <AnnouncementOutlinedIcon sx={{ height: "8vh", width: "8vh" }} />
       ),
       title: "STORIES/TASKS SOLVED",
@@ -22,7 +22,7 @@ const MissionsOverview = () => {
       avatarBgColor: theme.colors.red,
       avatarShadowColor: theme.colors.lightRed,
       seeReferrals: false,
-      CustomIcon: (
+      icon: (
         <PendingActionsOutlinedIcon sx={{ height: "8vh", width: "8vh" }} />
       ),
       title: "PENDING STORIES/ISSUES",
@@ -32,7 +32,7 @@ const MissionsOverview = () => {
       avatarBgColor: theme.colors.link,
       avatarShadowColor: theme.colors.link,
       seeReferrals: true,
-      CustomIcon: (
+      icon: (
         <AccessTimeOutlinedIcon sx={{ height: "8vh", width: "8vh" }} />
       ),
       title: "AVERAGE PR REVIEW TIME",
@@ -43,9 +43,9 @@ const MissionsOverview = () => {
     <Grid item xs={8} container spacing={4}>
       {missions.map((item, i) => {
         return (
-          <CustomMission
+          <Mission
             key={i}
-            CustomIcon={item.CustomIcon}
+            icon={item.icon}
             avatarBgColor={item.avatarBgColor}
             avatarShadowColor={item.avatarShadowColor}
             seeReferrals={item.seeReferrals}

@@ -1,20 +1,14 @@
 import React from 'react'
 import { Grid, Paper } from "@mui/material";
 import Title from './Title';
+import { TitledComponentProps } from '../../types';
 
 
-interface TitledComponentProps {
-    xs: number
-    title:string
-    children: any
-    height?: string
-}
 
-
-const TitledComponent: React.FC<TitledComponentProps> = ({xs, title, children, height}) => {
+const TitledComponent: React.FC<TitledComponentProps> = ({xs, title, children, minHeight}) => {
   return (
     <Grid item xs={xs}>
-      <Paper sx={{height: height}}>
+      <Paper sx={{minHeight: minHeight}}>
         <Title title={title}/>
         {children}
       </Paper>

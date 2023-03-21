@@ -20,7 +20,8 @@ declare module "@mui/material/styles" {
       red: string,
       lightRed: string
       gray: string,
-      lightGray: string
+      lightGray: string,
+      darkGray: string;
     }
   }
   
@@ -38,7 +39,8 @@ declare module "@mui/material/styles" {
       red: string,
       lightRed: string
       gray: string,
-      lightGray: string
+      lightGray: string,
+      darkGray: string;
     };
   }
 }

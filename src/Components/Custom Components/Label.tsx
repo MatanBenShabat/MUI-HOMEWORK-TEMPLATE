@@ -1,19 +1,7 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
-
-interface LabelProps {
-  className?: string;
-  color?:
-    | 'primary'
-    | 'black'
-    | 'secondary'
-    | 'error'
-    | 'warning'
-    | 'success'
-    | 'info';
-  children?: ReactNode;
-}
+import { LabelProps } from '../../types';
 
 const LabelWrapper = styled('span')(
   ({ theme }) => `

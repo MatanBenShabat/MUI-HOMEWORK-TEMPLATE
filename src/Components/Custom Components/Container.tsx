@@ -1,9 +1,7 @@
 import { Box, useTheme } from '@mui/material'
 import React from 'react'
+import { ContainerProps } from '../../types'
 
-interface ContainerProps {
-    children: any
-}
 
 const Container: React.FC<ContainerProps> = ({children}) => {
     const theme = useTheme()

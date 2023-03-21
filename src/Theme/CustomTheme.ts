@@ -15,7 +15,8 @@ export const CustomTheme = createTheme({
     red: "#ff0a54",
     lightRed: "#ffccd5",
     gray: "gray",
-    lightGray: "#e9ecef"
+    lightGray: "#e9ecef",
+    darkGray: "#5A5A5A"
   },
   typography: {
     fontSize: 20,

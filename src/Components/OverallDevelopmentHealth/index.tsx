@@ -42,7 +42,7 @@ const AvatarWrapperWarning = styled(Avatar)(
 
 const OverallDevelopmentHealth = () => {
   return (
-    <TitledComponent xs={5} title={"Overall Development Health"}>
+    <TitledComponent xs={5} title={"Overall Development Health"} minHeight="92.5vh">
       <CardContent>
         <Gauge
           circleRatio={0.65}

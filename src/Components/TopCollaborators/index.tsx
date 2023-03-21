@@ -64,21 +64,28 @@ const TopCollaborators = () => {
       avatar: OnlineUser.avatar,
       progress: 57,
       progressColor: theme.colors.red,
+      divider: true
     },
     {
       avatar: OnlineUser.avatar,
       progress: 57,
       progressColor: theme.colors.lightBlue,
+      divider: true
+
     },
     {
       avatar: OnlineUser.avatar,
       progress: 57,
       progressColor: theme.colors.orange,
+      divider: true
+
     },
     {
       avatar: OnlineUser.avatar,
       progress: 57,
       progressColor: theme.colors.green,
+      divider: false
+
 
     },
   ];
@@ -129,7 +136,7 @@ const TopCollaborators = () => {
                 >{`${item.progress}%`}</Typography>
               </Box>
             </ListItemWrapper>
-            <Divider />
+            {item.divider && <Divider />}
           </React.Fragment>
         ))}
       </List>

@@ -10,21 +10,14 @@ import {
   styled,
   useTheme,
 } from "@mui/material";
+import { MissionProps } from "../../types";
 
-interface CustomMissionProps {
-  avatarBgColor: string;
-  avatarShadowColor: string;
-  seeReferrals: boolean;
-  CustomIcon: any;
-  title: string;
-  subtitle: string;
-}
 
-const CustomMission: React.FC<CustomMissionProps> = ({
+const Mission: React.FC<MissionProps> = ({
   subtitle,
   title,
   avatarBgColor,
-  CustomIcon,
+  icon,
   avatarShadowColor,
   seeReferrals,
 }) => {
@@ -63,7 +56,7 @@ const CustomMission: React.FC<CustomMissionProps> = ({
           >
             <ListItemAvatar>
               <AvatarError variant="rounded">
-                {CustomIcon}
+                {icon}
               </AvatarError>
             </ListItemAvatar>
             <ListItemText
@@ -81,7 +74,7 @@ const CustomMission: React.FC<CustomMissionProps> = ({
           </ListItem>
           {seeReferrals && (
             <Typography sx={{ pt: "3%", fontSize: "1.3rem", color: "grey" }}>
-              <span style={{ color: `${theme.colors.blue}` }}>
+              <span style={{ color: `${theme.colors.blue}`, paddingRight: 6, cursor: "pointer" }}>
                 See referrals
               </span>
               which have a high bounce rate.
@@ -93,4 +86,4 @@ const CustomMission: React.FC<CustomMissionProps> = ({
   );
 };
 
-export default CustomMission;
+export default Mission;

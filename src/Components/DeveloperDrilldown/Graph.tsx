@@ -3,6 +3,7 @@ import { Box } from "@mui/system";
 import Chart from "react-apexcharts";
 import React from "react";
 import { ApexOptions } from "apexcharts";
+import { GraphProps } from "../../types";
 
 const ChartSparklineOptions: ApexOptions = {
   chart: {
@@ -77,11 +78,7 @@ const ChartSparklineOptions: ApexOptions = {
   },
 };
 
-interface GraphProps {
-  data: number[];
-  chartName: string;
-  subtitle:string;
-}
+
 
 const Graph: React.FC<GraphProps> = ({ data, chartName, subtitle }) => {
 
